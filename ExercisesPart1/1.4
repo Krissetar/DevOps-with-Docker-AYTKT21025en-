@@ -1,0 +1,21 @@
+The First terminal
+------------------
+
+docker run devopsdockeruh/exec_bash_exercise
+Wrote to file /usr/app/logs.txt
+...
+Wrote to file /usr/app/logs.txt
+
+The Second terminal
+-------------------
+
+docker ps
+CONTAINER ID      IMAGE                               COMMAND         CREATED             STATUS            PORTS           NAMES
+6eff9f3c127b      devopsdockeruh/exec_bash_exercise   "no index"      2 minutes ago       Up 2 minutes                      flamboyant_sammet
+
+docker exec -it 6e bash
+root@6eff9f3c127b:/usr/app# tail -f .logs.txt
+Mon, 08 Jul 2019 13:57:03 GMT
+...
+Secret message is:
+"Docker is easy"
